@@ -1,18 +1,18 @@
 "use client"
-import { Button } from "@/components/ui/button"
+
 import { TypeAnimation } from "react-type-animation"
-import { Press_Start_2P } from "next/font/google"
-import { IoLogoGithub, IoLogoLinkedin } from "react-icons/io"
+import { Press_Start_2P, Anton, Dancing_Script } from "next/font/google"
+import { IoLogoGithub } from "react-icons/io"
 import { TiSocialLinkedinCircular } from "react-icons/ti"
 
 import Link from "next/link"
 
-const pressStart = Press_Start_2P({ weight: "400", subsets: ["latin"] })
+const pressStart = Dancing_Script({ weight: "400", subsets: ["latin"] })
 
 const Hero = () => {
   return (
     <div
-      className="h-[calc(100dvh-96px)] w-full mx-auto flex justify-center items-center"
+      className="h-[calc(100dvh-96px)] w-full mx-auto flex justify-center items-center max-sm:h-full max-sm:mb-10"
       id="hero"
     >
       <div className="p-8 h-full w-full flex justify-center items-center flex-col ">
@@ -26,7 +26,7 @@ const Hero = () => {
             sequence={[`Hello, I'm\nAbood Eraqi\nFrontend Developer.`, 1000]}
             repeat={Infinity}
             speed={10}
-            className={`text-center ${pressStart.className} text-5xl h-full max-sm:text-3xl`}
+            className={`text-center ${pressStart.className} text-7xl h-full max-sm:text-4xl font-bold`}
           />
         </div>
         <div className="w-full h-fit  p-4 flex  justify-center items-center gap-4  max-sm:flex-col">

@@ -36,17 +36,17 @@ const AboutMe = () => {
           </div>
           <div>
             <p className="text-center font-bold text-lg  text-balance max-sm:text-center max-sm:text-xl mt-10  sm:text-center sm:text-xl">
-              Hey there! I'm Abood, a passionate frontend developer with two
-              years of experience in crafting digital experiences that both look
-              great and function flawlessly.
+              Hey there! I&apos;m Abood, a passionate frontend developer with
+              two years of experience in crafting digital experiences that both
+              look great and function flawlessly.
               <br />
               <br /> My journey into the world of web development started with a
               fascination for how websites can bring ideas to life and create
-              meaningful interactions with users. During my career, I've had the
-              opportunity to work on a variety of projects, from single-page
-              applications to complex web platforms. I specialize in HTML, CSS,
-              and JavaScript, with a keen eye for detail and a knack for
-              creating responsive and intuitive designs.
+              meaningful interactions with users. During my career, I&apos;ve
+              had the opportunity to work on a variety of projects, from
+              single-page applications to complex web platforms. I specialize in
+              HTML, CSS, and JavaScript, with a keen eye for detail and a knack
+              for creating responsive and intuitive designs.
             </p>
           </div>
         </div>

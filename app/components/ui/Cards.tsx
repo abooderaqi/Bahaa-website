@@ -1,4 +1,4 @@
-import { Card, CardHeader, CardBody, CardFooter } from "@nextui-org/card"
+import { Card, CardHeader, CardBody } from "@nextui-org/card"
 import Link from "next/link"
 
 type cardsProps = {
@@ -10,7 +10,7 @@ type cardsProps = {
 
 const Cards = ({ projectName, image, gitHub, liveUrl }: cardsProps) => {
   return (
-    <Card className="p-4 border border-slate-900 dark:border-white rounded-3xl max-sm:mb-10 sm:mb-10">
+    <Card className="p-4 border border-gray-400 dark:border-white rounded-3xl max-sm:mb-10 sm:mb-10">
       <CardBody className="overflow-visible py-2">
         <img
           alt="Card background"

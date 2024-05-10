@@ -14,22 +14,16 @@ const Projects = () => {
         <div className="flex  justify-center  items-center flex-col gap-4 h-full w-full ">
           <div className="lg:flex w-full h-full justify-center items-center gap-8  md:grid md:grid-cols-2 max-sm:flex-col ">
             <Cards
-              projectName="Porject 1"
-              image="https://nextui.org/images/hero-card-complete.jpeg"
-              gitHub=""
-              liveUrl=""
+              projectName="Omnifood"
+              image="https://i.imgur.com/hly2Tov.png"
+              gitHub="https://github.com/abooderaqi/Omnifood"
+              liveUrl="https://aboodomnifood.netlify.app/"
             />
             <Cards
-              projectName="Porject 1"
-              image="https://nextui.org/images/hero-card-complete.jpeg"
-              gitHub=""
-              liveUrl=""
-            />
-            <Cards
-              projectName="Porject 1"
-              image="https://nextui.org/images/hero-card-complete.jpeg"
-              gitHub=""
-              liveUrl=""
+              projectName="World Wise"
+              image="https://i.imgur.com/RBpNdTo.png"
+              gitHub="https://github.com/abooderaqi/worldwise"
+              liveUrl="https://aboodworldwise.netlify.app/"
             />
           </div>
         </div>
