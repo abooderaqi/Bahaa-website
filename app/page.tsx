@@ -1,17 +1,49 @@
-import Hero from "./components/hero"
-import Experience from "./components/experience"
-import Projects from "./components/projects"
-import Contact from "./components/contact"
-import AboutMe from "./components/about"
+import { FiDownload } from "react-icons/fi"
+import Social from "./components/Social"
+import Photo from "./components/Photo"
+import Link from "next/link"
+import Stats from "./components/Stats"
 
 export default function Home() {
   return (
-    <div className="min-h-[100dvh] mx-auto flex justify-center items-center flex-col ">
-      <Hero />
-      <AboutMe />
-      <Experience />
-      <Projects />
-      <Contact />
-    </div>
+    <section className="min-h-screen">
+      <div className="container mx-auto min-h-full py-4 xl:py-0">
+        <div className="flex flex-col xl:flex-row items-center justify-between xl:pt-8 xl:pb-24">
+          <div className="text-center xl:text-left order-2 xl:order-none">
+            <span>Web Developer</span>
+            <h1 className="h1">
+              Hey I&apos;m
+              <br /> Abood Eraqi
+            </h1>
+            <p className="max-w-[500px] mb-9  text-[#00ff99]">
+              a passionate full stack developer with two years of experience in
+              crafting digital experiences that both look great and function
+              flawlessly.
+            </p>
+            <div className="flex flex-col xl:flex-row items-center gap-8">
+              <Link
+                href="/cv.pdf"
+                download="cv"
+                target="_blank"
+                className="uppercase flex items-center gap-2 p-3 border rounded-xl text-[#00ff99] bg-inherit border-[#00ff99] hover:dark:bg-white hover:dark:text-[#00ff99]"
+              >
+                <span>Download CV</span>
+                <FiDownload className="text-xl" />
+              </Link>
+              <div className="mb-8 xl:mb-0">
+                <Social
+                  containerStyle="flex gap-6"
+                  iconStyle="w-9 h-9 border border-[#00ff99] rounded-full flex justify-center items-center text-[#00ff99] hover:bg-[#00ff99] hover:dark:text-white hover:text-slate-900 hover:transition-all duration-500"
+                />
+              </div>
+            </div>
+          </div>
+          <div className="oreder-1 xl:order-none mb-8 xl:mb-0">
+            <Photo />
+          </div>
+        </div>
+      </div>
+      <Stats />
+    </section>
   )
 }

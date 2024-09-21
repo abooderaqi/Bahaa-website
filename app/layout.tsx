@@ -1,13 +1,19 @@
 import type { Metadata } from "next"
-import { Poppins } from "next/font/google"
+import { JetBrains_Mono } from "next/font/google"
 import { ThemeProvider } from "./context/ThemeProvider"
 
 import Navbar from "./components/navbar"
 import Footer from "./components/Footer"
 
 import "./globals.css"
+import PageTransition from "./components/PageTransition"
+import StairTransition from "./components/stairTransition"
 
-const poppins = Poppins({ weight: "400", subsets: ["latin"] })
+const JetBrainsMono = JetBrains_Mono({
+  weight: ["400", "500", "600", "700"],
+  subsets: ["latin"],
+  variable: "--font-jetbrainsMono",
+})
 
 export const metadata: Metadata = {
   title: "AE Portfolio",
@@ -21,11 +27,13 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={poppins.className}>
-        <ThemeProvider attribute="class" defaultTheme="light">
+      <body className={JetBrainsMono.variable}>
+        <ThemeProvider attribute="class" defaultTheme="dark">
           <Navbar />
-          {children}
-          <Footer />
+          <StairTransition />
+          <PageTransition>{children}</PageTransition>
+
+          {/* <Footer /> */}
         </ThemeProvider>
       </body>
     </html>
