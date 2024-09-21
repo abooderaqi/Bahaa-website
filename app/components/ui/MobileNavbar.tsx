@@ -9,7 +9,30 @@ import {
   SheetTitle,
   SheetTrigger,
 } from "./sheet"
+import Link from "next/link"
 
+const links = [
+  {
+    name: "home",
+    path: "/",
+  },
+  {
+    name: "about",
+    path: "/about",
+  },
+  {
+    name: "services",
+    path: "/services",
+  },
+  {
+    name: "works",
+    path: "/work",
+  },
+  {
+    name: "contact",
+    path: "/contact",
+  },
+]
 const MobileNavbar = () => {
   return (
     <Sheet>
@@ -37,39 +60,19 @@ const MobileNavbar = () => {
       </SheetTrigger>
       <SheetContent>
         <ul className="flex flex-col p-4 md:p-0 mt-4 font-medium  gap-4  md:space-x-8 rtl:space-x-reverse md:flex-row md:mt-0 ">
-          <li>
-            <a
-              href="#aboutSection"
-              className="block dark:focus:bg-slate-700 dark:[&.active]:bg-slate-700  focus:bg-slate-400  [&.active]:bg-slate-400  py-2 px-3 hover:bg-gray-300 text-slate-900 dark:text-[#fff] rounded md:bg-transparent dark:hover:bg-gray-700 md:hover:text-slate-700 md:dark:hover:text-slate-500 md:dark:text-[#fff] md:p-0 "
-              aria-current="page"
-            >
-              About
-            </a>
-          </li>
-          <li>
-            <a
-              href="#experienceSection"
-              className="block py-2 dark:focus:bg-slate-700 dark:[&.active]:bg-slate-700  focus:bg-slate-400  [&.active]:bg-slate-400 px-3 text-slate-900 rounded hover:bg-gray-300 md:hover:bg-transparent md:hover:text-slate-700 md:p-0 md:dark:hover:text-slate-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-            >
-              Experience
-            </a>
-          </li>
-          <li>
-            <a
-              href="#projectsSection"
-              className="block py-2 px-3 dark:focus:bg-slate-700 dark:[&.active]:bg-slate-700  focus:bg-slate-400  [&.active]:bg-slate-400 text-slate-900 rounded hover:bg-gray-300 md:hover:bg-transparent md:hover:text-slate-700 md:p-0 md:dark:hover:text-slate-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-            >
-              Projects
-            </a>
-          </li>
-          <li>
-            <a
-              href="#contactSection"
-              className="block py-2 px-3 dark:focus:bg-slate-700 dark:[&.active]:bg-slate-700  focus:bg-slate-400  [&.active]:bg-slate-400 text-slate-900 rounded hover:bg-gray-300 md:hover:bg-transparent md:hover:text-slate-700 md:p-0 md:dark:hover:text-slate-500 dark:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700"
-            >
-              Contact
-            </a>
-          </li>
+          {links.map((link, index) => {
+            return (
+              <li key={index}>
+                <Link
+                  href={link.path}
+                  className="block dark:focus:bg-slate-700 dark:[&.active]:bg-slate-700 capitalize  focus:bg-slate-400  [&.active]:bg-slate-400  py-2 px-3 hover:bg-gray-300 text-slate-900 dark:text-[#fff] rounded md:bg-transparent dark:hover:bg-gray-700 md:hover:text-slate-700 md:dark:hover:text-slate-500 md:dark:text-[#fff] md:p-0 "
+                  aria-current="page"
+                >
+                  {link.name}
+                </Link>
+              </li>
+            )
+          })}
         </ul>
       </SheetContent>
     </Sheet>
