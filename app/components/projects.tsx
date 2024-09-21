@@ -28,7 +28,7 @@ const projects = [
     github: "https://github.com/abooderaqi/Omnifood",
   },
   {
-    num: "01",
+    num: "02",
     category: "fullstack",
     title: "MYA Boutique",
     description: `Mya Boutique is a modern e-commerce platform built with Next.js, offering a seamless and responsive online shopping experience. 
