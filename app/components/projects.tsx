@@ -41,7 +41,7 @@ const projects = [
       { name: "Prisma" },
       { name: "Postgre" },
     ],
-    live: "https://mya-ecru.vercel.app/",
+    live: "https://mya-psi.vercel.app/",
     image: "/mya.JPG",
     github: "https://github.com/abooderaqi/MYA.git",
   },
