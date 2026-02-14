@@ -1,49 +1,41 @@
-"use client"
+"use client";
 
-import {
-  FaHtml5,
-  FaCss3,
-  FaJs,
-  FaReact,
-  FaNodeJs,
-  FaGraduationCap,
-  FaIdBadge,
-} from "react-icons/fa"
-import { SiNextdotjs, SiTypescript, SiTailwindcss } from "react-icons/si"
-import { ScrollArea } from "./ui/scroll-area"
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs"
+import { FaGraduationCap, FaIdBadge } from "react-icons/fa";
+import { SiNextdotjs, SiTypescript, SiTailwindcss } from "react-icons/si";
+import { ScrollArea } from "./ui/scroll-area";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "./ui/tooltip"
-import { motion } from "framer-motion"
+} from "./ui/tooltip";
+import { motion } from "framer-motion";
 
 const about = {
   title: "About me",
   description:
-    "Hey there! I'm Abood, a passionate frontend developer with two years of experience in crafting digital experiences that both look great and function flawlessly.",
+    "Dr. Baha’ Aldeen Almomani is a PhD graduate in English Language Studies (English Literature) from Sultan Zainal Abidin University (UniSZA), Malaysia, and a retired Lieutenant Colonel of the Jordanian Armed Forces. He has led English departments, managed quality assurance in academic institutions, and taught English and literature to military officers, international cadets, and undergraduate students. His research integrates literary studies with security studies, law, linguistics, and political science, focusing on the ethical, cultural, and ideological dimensions of literature and strategic intelligence. Dr. Almomani offers professional services including academic proofreading, translation (Arabic ↔ English), research consultation, and training in research methodologies. All work strictly adheres to international academic integrity standards.",
   info: [
     {
       fieldName: "Name",
-      fieldValue: "Abood Eraqi",
+      fieldValue: "Baha’Aldeen Almomani",
     },
     {
       fieldName: "Phone",
-      fieldValue: "(+962) 792 937 381",
+      fieldValue: "(+962) 7 7206 7647",
     },
-    {
-      fieldName: "Experience",
-      fieldValue: "+2 Years",
-    },
+    // {
+    //   fieldName: "Experience",
+    //   fieldValue: "+2 Years",
+    // },
     {
       fieldName: "Nationality",
       fieldValue: "Jordanian",
     },
     {
       fieldName: "Email",
-      fieldValue: "abood.eraqi1@gmail.com",
+      fieldValue: "almomanibaha5@gmail.com | safabaha2008@gmail.com",
     },
     {
       fieldName: "Freelance",
@@ -54,75 +46,86 @@ const about = {
       fieldValue: "English, Arabic",
     },
   ],
-}
+};
 
-const experience = {
+const teachingandtraining = {
   icon: <FaIdBadge />,
-  title: "My experience",
-  description: "",
   items: [
     {
-      company: "Tahalof",
-      position: "training Full stack developer",
-      duration: "june 2022 - oct 2022",
+      company:
+        "English Literature and Academic Writing (Undergraduate and Graduate Levels)",
+      // position: "training Full stack developer",
+      // duration: "june 2022 - oct 2022",
     },
     {
-      company: "E-commerce startup",
-      position: "Freelance",
-      duration: "2022 - present",
+      company: "Research Methodology and Academic Supervision",
+    },
+    {
+      company: "English for Military and Security Personnel",
+    },
+    {
+      company: "IELTS & TOEFL Preparation Programs",
+    },
+    {
+      company: "Trainer of Trainers- English Instructors (ToT)",
     },
   ],
-}
+};
 const education = {
   icon: <FaGraduationCap />,
   title: "My education",
   description: "",
   items: [
     {
-      instituation: "Jordan university of science and technology",
-      degree: "Software Engineering",
-      duration: "2018 - 2022",
+      instituation: "Sultan Zainal Abidin University (UniSZA), Malaysia",
+      degree: "PhD in English Language Studies (English Literature)",
+      duration: "2021 - 2025",
     },
   ],
-}
-const skills = {
-  title: "My skills",
+};
+const publications = {
+  icon: <FaIdBadge />,
+  title: "My publications",
   description: "",
-  skillList: [
+  items: [
     {
-      icon: <FaHtml5 />,
-      title: "HTML5",
+      name: "Almomani, B. A. R. S., & Azmi, M. N. B. L",
+      title:
+        "Espionage and Securitization in the Age of Global Conflict. Security Science Journal, 6(2), 118–137",
+      year: "2025",
     },
     {
-      icon: <FaCss3 />,
-      title: "CSS3",
+      name: "Almomani, B. A. R. S., & Azmi, M. N. B. L",
+      title:
+        "From Ancient Espionage to Cyber Warfare: Evolving Threats and the Need for Modern Legal Frameworks. Tianjin Daxue Xuebao",
+      year: "2024",
     },
     {
-      icon: <FaJs />,
-      title: "javascript",
+      name: "Almomani, B. A. R. S",
+      title:
+        "Jordan’s Path to Peace: His Majesty King Abdullah II’s Vision for Regional Stability. Jilin Journal of University of Science and Technology",
+      year: "2024",
     },
     {
-      icon: <SiTypescript />,
-      title: "typescript",
+      name: "Almomani, B. A. R. S., & Azmi, M. N. B. L",
+      title:
+        "The Empire’s Hidden Hand: Espionage as Dominion in Kipling’s Kim and Childers’ The Riddle of the Sands. Zenodo. https://doi.org/10.5281/zenodo.14293427",
+      year: "2024",
     },
     {
-      icon: <FaReact />,
-      title: "react.js",
+      name: "Almomani, B. A. R. S., & Azmi, M. N. B. L",
+      title:
+        "Battles of Influence: A Constructivist and Realist Analysis of Great Power Rivalries and Regional Stability in the 21st Century. HRMARS.",
+      year: "2024",
     },
     {
-      icon: <SiTailwindcss />,
-      title: "tailwind.css",
-    },
-    {
-      icon: <FaNodeJs />,
-      title: "node.js",
-    },
-    {
-      icon: <SiNextdotjs />,
-      title: "next.js",
+      name: "Almomani, B. A. R. S., & Azmi, M. N. B. L",
+      title:
+        "In the Shadow of Empires: Power and Intrigue in Kipling’s Kim. HRMARS.",
+      year: "2024",
     },
   ],
-}
+};
 
 const AboutMe = () => {
   return (
@@ -136,42 +139,44 @@ const AboutMe = () => {
     >
       <div className="container mx-auto">
         <Tabs
-          defaultValue="experience"
+          defaultValue="about"
           className="flex flex-col xl:flex-row gap-[60px]"
         >
           <TabsList className="flex flex-col w-full max-w-[380px] mx-auto xl:mx-0 gap-6">
-            <TabsTrigger value="experience">Experience</TabsTrigger>
+            <TabsTrigger value="teachingandtraining">
+              Teaching & Training
+            </TabsTrigger>
             <TabsTrigger value="education">Education</TabsTrigger>
-            <TabsTrigger value="skills">Skills</TabsTrigger>
+            <TabsTrigger value="publications">Publications</TabsTrigger>
             <TabsTrigger value="about">About me</TabsTrigger>
           </TabsList>
           <div className="min-h-[70vh] w-full">
-            <TabsContent value="experience" className="w-full">
+            <TabsContent value="teachingandtraining" className="w-full">
               <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                <h3 className="text-4xl font-bold">{experience.title}</h3>
+                {/* <h3 className="text-4xl font-bold">{teachingandtraining.title}</h3>
                 <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                  {experience.description}
-                </p>
+                  {teachingandtraining.description}
+                </p> */}
                 <ScrollArea className="h-[400px]">
                   <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
-                    {experience.items.map((item, index) => {
+                    {teachingandtraining.items.map((item, index) => {
                       return (
                         <li
                           key={index}
                           className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col items-center justify-center lg:items-start gap-1"
                         >
-                          <span className="text-[#00ff99]">
+                          {/* <span className="text-[#00ff99]">
                             {item.duration}
                           </span>
                           <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
                             {item.position}
-                          </h3>
+                          </h3> */}
                           <div className="flex items-center gap-3">
-                            <span className="w-[6px] h-[6px] rounded-full bg-[#00ff99]"></span>
-                            <p className="text-white/60">{item.company}</p>
+                            {/* <span className="w-[6px] h-[6px] rounded-full bg-[#00ff99]"></span> */}
+                            <p className="text-white/60 ">{item.company}</p>
                           </div>
                         </li>
-                      )
+                      );
                     })}
                   </ul>
                 </ScrollArea>
@@ -194,7 +199,7 @@ const AboutMe = () => {
                           <span className="text-[#00ff99]">
                             {item.duration}
                           </span>
-                          <h3 className="text-xl max-w-[260px] min-h-[60px] text-center lg:text-left">
+                          <h3 className="text-[15px] max-w-[260px] min-h-[60px] text-center lg:text-left">
                             {item.degree}
                           </h3>
                           <div className="flex items-center gap-3">
@@ -202,40 +207,41 @@ const AboutMe = () => {
                             <p className="text-white/60">{item.instituation}</p>
                           </div>
                         </li>
-                      )
+                      );
                     })}
                   </ul>
                 </ScrollArea>
               </div>
             </TabsContent>
-            <TabsContent value="skills" className="w-full">
-              <div className="flex flex-col gap-[30px]">
-                <div className="flex flex-col gap-[30px] text-center xl:text-left">
-                  <h3 className="text-4xl font-bold">{skills.title}</h3>
-                  <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
-                    {skills.description}
-                  </p>
-                  <ul className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 xl:gap-[30px] gap-4">
-                    {skills.skillList.map((skill, index) => {
+            <TabsContent value="publications" className="w-full">
+              <div className="flex flex-col gap-[30px] text-center xl:text-left">
+                <h3 className="text-4xl font-bold">{publications.title}</h3>
+                <p className="max-w-[600px] text-white/60 mx-auto xl:mx-0">
+                  {publications.description}
+                </p>
+                <ScrollArea className="h-[400px]">
+                  <ul className="grid grid-cols-1 lg:grid-cols-2 gap-[30px]">
+                    {publications.items.map((item, index) => {
                       return (
-                        <li key={index}>
-                          <TooltipProvider delayDuration={100}>
-                            <Tooltip>
-                              <TooltipTrigger className="w-full h-[150px] bg-[#232329] rounded-xl flex justify-center items-center gap-4 group">
-                                <div className="text-6xl group-hover:text-[#00ff99] transition-all duration-300">
-                                  {skill.icon}
-                                </div>
-                              </TooltipTrigger>
-                              <TooltipContent>
-                                <p className="capitalize">{skill.title}</p>
-                              </TooltipContent>
-                            </Tooltip>
-                          </TooltipProvider>
+                        <li
+                          key={index}
+                          className="bg-[#232329] h-[184px] py-6 px-10 rounded-xl flex flex-col items-center justify-center lg:items-start gap-1"
+                        >
+                          <span className="text-[#00ff99]">{item.year}</span>
+                          <h3 className="text-xs max-w-[260px] min-h-[60px] text-center lg:text-left">
+                            {item.title}
+                          </h3>
+                          <div className="flex items-center gap-3">
+                            <span className="w-[6px] h-[6px] rounded-full bg-[#00ff99]"></span>
+                            <p className="text-white/60 text-[10px]">
+                              {item.name}
+                            </p>
+                          </div>
                         </li>
-                      )
+                      );
                     })}
                   </ul>
-                </div>
+                </ScrollArea>
               </div>
             </TabsContent>
             <TabsContent
@@ -257,7 +263,7 @@ const AboutMe = () => {
                         <span className="text-white/60">{item.fieldName}</span>
                         <span className="text-lg">{item.fieldValue}</span>
                       </li>
-                    )
+                    );
                   })}
                 </ul>
               </div>
@@ -266,7 +272,7 @@ const AboutMe = () => {
         </Tabs>
       </div>
     </motion.div>
-  )
-}
+  );
+};
 
-export default AboutMe
+export default AboutMe;

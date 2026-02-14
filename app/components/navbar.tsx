@@ -1,9 +1,9 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import DesktopNavbar from "./ui/DesktopNavbar"
-import MobileNavbar from "./ui/MobileNavbar"
-import { ThemeToggle } from "./ui/ThemeToggle"
+import Link from "next/link";
+import DesktopNavbar from "./ui/DesktopNavbar";
+import MobileNavbar from "./ui/MobileNavbar";
+import { ThemeToggle } from "./ui/ThemeToggle";
 
 const Navbar = () => {
   return (
@@ -14,9 +14,9 @@ const Navbar = () => {
           className="flex items-center space-x-3 rtl:space-x-reverse"
         >
           <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
-            AboodEraqi
-            <span className="text-[#00ff99]">.</span>
+            Dr.Baha&apos;a Momani
           </span>
+          <span className="text-[#00ff99]">.</span>
         </Link>
         {/* <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse"> */}
         {/* <ThemeToggle /> */}
@@ -25,7 +25,7 @@ const Navbar = () => {
         <DesktopNavbar />
       </div>
     </nav>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;

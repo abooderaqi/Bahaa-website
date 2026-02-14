@@ -1,28 +1,32 @@
-"use client"
+"use client";
 
-import Link from "next/link"
-import { usePathname } from "next/navigation"
+import Link from "next/link";
+import { usePathname } from "next/navigation";
 const links = [
   { name: "home", path: "/" },
   {
     name: "about",
     path: "/about",
   },
-  {
-    name: "work",
-    path: "/work",
-  },
+  // {
+  //   name: "work",
+  //   path: "/work",
+  // },
   {
     name: "services",
     path: "/services",
   },
   {
+    name: "research",
+    path: "/research",
+  },
+  {
     name: "contact",
     path: "/contact",
   },
-]
+];
 const DesktopNavbar = () => {
-  const pathname = usePathname()
+  const pathname = usePathname();
   return (
     <div
       className="items-center justify-between hidden w-full md:flex md:w-auto md:order-1"
@@ -41,11 +45,11 @@ const DesktopNavbar = () => {
             >
               {link.name}
             </Link>
-          )
+          );
         })}
       </ul>
     </div>
-  )
-}
+  );
+};
 
-export default DesktopNavbar
+export default DesktopNavbar;

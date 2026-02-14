@@ -1,8 +1,8 @@
-"use client"
+"use client";
 
-import { Button } from "../components/ui/button"
-import { Input } from "../components/ui/input"
-import { Textarea } from "../components/ui/textarea"
+import { Button } from "../components/ui/button";
+import { Input } from "../components/ui/input";
+import { Textarea } from "../components/ui/textarea";
 
 import {
   Select,
@@ -12,33 +12,33 @@ import {
   SelectLabel,
   SelectTrigger,
   SelectValue,
-} from "../components/ui/select"
+} from "../components/ui/select";
 import {
   FaPhoneAlt,
   FaEnvelope,
   FaMapMarkerAlt,
   FaMapMarkedAlt,
-} from "react-icons/fa"
+} from "react-icons/fa";
 
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 
 const info = [
   {
     icon: <FaPhoneAlt />,
     title: "Phone",
-    description: "(+962) 792 937 381",
+    description: "(+962) 7 7206 7647",
   },
   {
     icon: <FaEnvelope />,
     title: "Email",
-    description: "abood.eraqi1@gmail.com",
+    email: "almomanibaha5@gmail.com | safabaha2008@gmail.com",
   },
   {
     icon: <FaMapMarkedAlt />,
     title: "Address",
     description: "Amman, Jordan",
   },
-]
+];
 
 const Contact = () => {
   return (
@@ -52,27 +52,6 @@ const Contact = () => {
     >
       <div className="container mx-auto">
         <div className="flex flex-col xl:flex-row gap-[30px]">
-          <div className="xl:w-[54%] order-2 xl:order-none">
-            <form className="flex flex-col gap-6 p-10 bg-[#27272c] rounded-xl">
-              <h3 className="text-4xl text-[#00ff99]">
-                Let&apos;s work togther
-              </h3>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <Input type="firstname" placeholder="Firstname" />
-                <Input type="lastname" placeholder="Lastname" />
-                <Input type="email" placeholder="Email" />
-                <Input type="phone" placeholder="Phone number" />
-              </div>
-              <Textarea
-                placeholder="Type your message here..."
-                className="h-[200px]"
-              />
-              <Button size="lg" className="max-w-40">
-                Send message
-              </Button>
-            </form>
-          </div>
           <div className="flex-1 flex items-center xl:justify-end order-1 xl:order-none mb-8 xl:mb-0">
             <ul className="flex flex-col gap-10">
               {info.map((item, index) => {
@@ -83,17 +62,23 @@ const Contact = () => {
                     </div>
                     <div className="flex-1">
                       <p className="text-white/60">{item.title}</p>
-                      <h3 className="text-xl">{item.description}</h3>
+                      {item.description ? (
+                        <h3 className="text-xl">{item.description}</h3>
+                      ) : (
+                        <a href={`mailto:${item.email}`} className="text-xl">
+                          {item.email}
+                        </a>
+                      )}
                     </div>
                   </li>
-                )
+                );
               })}
             </ul>
           </div>
         </div>
       </div>
     </motion.section>
-  )
-}
+  );
+};
 
-export default Contact
+export default Contact;

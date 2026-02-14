@@ -1,7 +1,7 @@
-"use client"
+"use client";
 
-import { motion } from "framer-motion"
-import Image from "next/image"
+import { motion } from "framer-motion";
+import Image from "next/image";
 //  import * from '../../public/image.png'
 
 const Photo = () => {
@@ -60,7 +60,7 @@ const Photo = () => {
         </motion.svg>
       </motion.div>
     </div>
-  )
-}
+  );
+};
 
-export default Photo
+export default Photo;

@@ -1,4 +1,4 @@
-import { Button } from "@/app/components/ui/button"
+import { Button } from "@/app/components/ui/button";
 import {
   Sheet,
   SheetClose,
@@ -8,8 +8,8 @@ import {
   SheetHeader,
   SheetTitle,
   SheetTrigger,
-} from "./sheet"
-import Link from "next/link"
+} from "./sheet";
+import Link from "next/link";
 
 const links = [
   {
@@ -25,14 +25,14 @@ const links = [
     path: "/services",
   },
   {
-    name: "works",
-    path: "/work",
+    name: "research",
+    path: "/research",
   },
   {
     name: "contact",
     path: "/contact",
   },
-]
+];
 const MobileNavbar = () => {
   return (
     <Sheet>
@@ -71,12 +71,12 @@ const MobileNavbar = () => {
                   {link.name}
                 </Link>
               </li>
-            )
+            );
           })}
         </ul>
       </SheetContent>
     </Sheet>
-  )
-}
+  );
+};
 
-export default MobileNavbar
+export default MobileNavbar;
