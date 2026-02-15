@@ -28,7 +28,7 @@ export default function Home() {
             </p>
             <div className="flex flex-col xl:flex-row items-center gap-8">
               <Link
-                href="#"
+                href="/cv.pdf"
                 download="cv"
                 target="_blank"
                 className="uppercase flex items-center gap-2 p-3 border rounded-xl text-[#00ff99] bg-inherit border-[#00ff99] hover:dark:bg-white hover:dark:text-[#00ff99]"
